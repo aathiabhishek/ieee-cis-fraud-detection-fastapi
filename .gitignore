@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+.DS_Store
+*.csv
+!model_results/model_comparison.csv

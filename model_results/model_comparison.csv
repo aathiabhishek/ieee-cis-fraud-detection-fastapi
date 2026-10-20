@@ -1,0 +1,4 @@
+Model,ROC-AUC,PR-AUC,F1-Score (Opt),Best Threshold,Train Time (s),Latency (ms/1k)
+XGBoost,0.8899,0.4697,0.4745,0.854,1.41,0.0
+LightGBM,0.8848,0.4544,0.4797,0.851,1.65,0.001
+RandomForest,0.8622,0.4156,0.4355,0.751,6.85,0.001

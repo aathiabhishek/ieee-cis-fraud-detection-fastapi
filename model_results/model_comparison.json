@@ -1,0 +1,29 @@
+[
+    {
+        "Model":"XGBoost",
+        "ROC-AUC":0.8899,
+        "PR-AUC":0.4697,
+        "F1-Score (Opt)":0.4745,
+        "Best Threshold":0.854,
+        "Train Time (s)":1.41,
+        "Latency (ms\/1k)":0.0
+    },
+    {
+        "Model":"LightGBM",
+        "ROC-AUC":0.8848,
+        "PR-AUC":0.4544,
+        "F1-Score (Opt)":0.4797,
+        "Best Threshold":0.851,
+        "Train Time (s)":1.65,
+        "Latency (ms\/1k)":0.001
+    },
+    {
+        "Model":"RandomForest",
+        "ROC-AUC":0.8622,
+        "PR-AUC":0.4156,
+        "F1-Score (Opt)":0.4355,
+        "Best Threshold":0.751,
+        "Train Time (s)":6.85,
+        "Latency (ms\/1k)":0.001
+    }
+]
