@@ -61,11 +61,10 @@ df = load_and_optimize_data(TRANSACTION_PATH, IDENTITY_PATH, nrows=SAMPLE_SIZE)
 # 2. CHRONOLOGICAL TRAIN / VALIDATION SPLIT (CRITICAL: SPLIT FIRST!)
 # =====================================================================
 # Sort by time elapsed (TransactionDT) so we train on the past to predict the future.
-# Splitting BEFORE feature engineering/encoding prevents temporal data leakage.
 print("\n⏳ Sorting chronologically and performing 80/20 time-based split...")
 df = df.sort_values("TransactionDT").reset_index(drop=True)
 
-# Engineer deterministic row-level time feature (safe before split as it uses no group stats)
+# Engineer deterministic row-level time feature 
 df["Transaction_Hour"] = ((df["TransactionDT"] // 3600) % 24).astype("int32")
 
 split_idx = int(len(df) * 0.80)
